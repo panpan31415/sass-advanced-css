@@ -6,6 +6,34 @@
     top: 0;
     left: 0;
     z-index: 300;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+
+    &__close{
+       &:link,&:visited{
+           color:$color-grey-dark;
+           position: absolute;
+           top:2.5rem;
+           right:2.5rem;
+           font-size: 3rem;
+           text-decoration: none;
+           display: inline-block;
+           transform: all .2s;
+           line-height: 1;
+       }
+       &:hover{
+           color:$color-primary;
+       }
+    }
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    &:target &__contnent{
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
     &__contnent {
         @include centerXY;
         width: 75%;
@@ -15,6 +43,12 @@
         border-radius: 3px;
         display: table;
         overflow: hidden;
+        transition: all .4s .2s;
+        transform: translate(-50%,-50%) scale(.0);
+        opacity: 0;
+
+        
+       
     }
     &__left {
         width: 33%;
@@ -22,11 +56,10 @@
         vertical-align: middle;
     }
     &__right {
-        width:66%;
+        width: 66%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
-
     }
     &__img {
         display: block;
@@ -35,18 +68,18 @@
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
-        -webkit-column-count:2;
-        -moz-column-count:2;
-        -ms-column-count:2;
-        column-count:2;
-        -webkit-column-gap:4rem;
-        -ms-column-gap:4rem;
-        -moz-column-gap:4rem;
-        column-gap:4rem;
-        column-rule:1px solid $color-gery-dark-2;
-        -moz-hyphens:auto;
-        -ms-hyphens:auto;
-        -webkit-hyphens:auto;
-        hyphens:auto;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        -ms-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 4rem;
+        -ms-column-gap: 4rem;
+        -moz-column-gap: 4rem;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-gery-dark-2;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
     }
 }
