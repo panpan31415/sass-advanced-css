@@ -21,7 +21,7 @@ html {
         font-size: 56.25%; // 1rem=9px;
     }
     @include respond(tab-port) {
-        font-size: 50%; //1rem=8px;  
+        font-size: 50%; //1rem=8px;
     }
 }
 
@@ -29,4 +29,9 @@ body {
     box-sizing: border-box;
     padding: 3rem;
     position: relative;
+    padding: 3 rem;
+    @include respond(tab-port) {
+        padding: 0;
+        ; //1rem=8px;  
+    }
 }
