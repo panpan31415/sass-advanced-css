@@ -9,29 +9,29 @@
     visibility: hidden;
     opacity: 0;
     transition: all .3s;
-
-    &__close{
-       &:link,&:visited{
-           color:$color-grey-dark;
-           position: absolute;
-           top:2.5rem;
-           right:2.5rem;
-           font-size: 3rem;
-           text-decoration: none;
-           display: inline-block;
-           transform: all .2s;
-           line-height: 1;
-       }
-       &:hover{
-           color:$color-primary;
-       }
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transform: all .2s;
+            line-height: 1;
+        }
+        &:hover {
+            color: $color-primary;
+        }
     }
     &:target {
         visibility: visible;
         opacity: 1;
     }
-    &:target &__contnent{
-        transform: translate(-50%,-50%) scale(1);
+    &:target &__contnent {
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
     &__contnent {
@@ -44,11 +44,8 @@
         display: table;
         overflow: hidden;
         transition: all .4s .2s;
-        transform: translate(-50%,-50%) scale(.0);
+        transform: translate(-50%, -50%) scale(.0);
         opacity: 0;
-
-        
-       
     }
     &__left {
         width: 33%;

@@ -1,3 +1,22 @@
+/*
+0-600px :phone
+
+600-900px :tablet portrate 
+
+900-1200 :tablet landscape
+
+1200-1800 :normal style applies
+
+1800+px: big desktop
+
+    $breakpoint argument choices
+    -phone
+    -tab-port
+    -tab-land
+    -big-desktop
+
+    for miedia query, em is the best unit because rem is not supported by all browser. 1em = 16px by default browser setting
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -36,7 +55,16 @@
 
 html {
   font-size: 62.5%;
-  /* this is relative to browser default font-size 16px , so the cacluted font-size is 10px*/ }
+  /* this is relative to browser default font-size 16px , so the cacluted font-size is 10px*/
+  /*
+     -phone -tab-port -tab-land -big-desktop
+    */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
