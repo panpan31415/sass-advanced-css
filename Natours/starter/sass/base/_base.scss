@@ -35,3 +35,8 @@ body {
         ; //1rem=8px;  
     }
 }
+
+::selection{
+    background-color:$color-primary;
+    color:white;
+}
